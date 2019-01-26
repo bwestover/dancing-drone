@@ -390,3 +390,13 @@ class Tello:
 
         """
         return self.send_command('streamoff')
+
+    def go_to_coord(self, x, y, z, speed):
+        """Goes to coordinates x, y, z at speed
+
+
+        Returns:
+            str: Response from Tello, 'OK' or 'FALSE'.
+
+        """
+        return self.send_command('go %s %s %s %s' % (x, y, z, speed))
