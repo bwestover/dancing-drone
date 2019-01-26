@@ -400,3 +400,13 @@ class Tello:
 
         """
         return self.send_command('go %s %s %s %s' % (x, y, z, speed))
+
+    def curve_to_coord(self, x1, y1, z1, x2, y2, z2, speed):
+        """Fly at a curve according to the two given coordinates speed (cm/s)
+
+
+        Returns:
+            str: Response from Tello, 'OK' or 'FALSE'.
+
+        """
+        return self.send_command('curve %s %s %s %s %s %s %s' % (x1, y1, z1, x2, y2, z2, speed))
