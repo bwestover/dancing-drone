@@ -372,3 +372,21 @@ class Tello:
 
         """
         return self.send_command('ccw %s' % degrees)
+
+    def stream_on(self):
+        """Turn on video stream.
+
+        Returns:
+            str: Response from Tello, 'OK' or 'FALSE'.
+
+        """
+        return self.send_command('streamon')
+
+    def stream_off(self):
+        """Turn off video stream.
+
+        Returns:
+            str: Response from Tello, 'OK' or 'FALSE'.
+
+        """
+        return self.send_command('streamoff')
