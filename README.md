@@ -1,9 +1,12 @@
 # Drone controller
 
-To test receiving the video stream, you can use ffplay:
+We set up this project at [Valley Hackathon](https://valleyhackathon.com/) 2019:
+- [@bwestover](https://github.com/bwestover)
+- [@siegfried767](https://github.com/siegfried767)
+- [@snkstorm](https://github.com/snkstorm)
+- [@YaroLag](https://github.com/YaroLag)
 
-```
-ffplay -probesize 32 -i udp://@:11111 -framerate 30
-```
 
-This sets up a local udp server and displays the video stream that it receives. The Tello sends its video stream on `UDP:11111`
+Credits:
+- https://github.com/damiafuentes/DJITelloPy
+- https://github.com/microlinux/tello  
