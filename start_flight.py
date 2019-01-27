@@ -6,7 +6,7 @@ import numpy as np
 import time
 
 # Speed of the drone
-S = 60
+S = 99
 # Frames per second of the pygame window display
 FPS = 25
 
