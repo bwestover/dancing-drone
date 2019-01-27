@@ -140,6 +140,8 @@ class FrontEnd(object):
         elif key == pygame.K_l:  # land
             self.tello.land()
             self.send_rc_control = False
+        elif key == pygame.K_f: #flip
+            self.tello.flip_left()
 
     def update(self):
         """ Update routine. Send velocities to Tello."""
