@@ -26,12 +26,12 @@ class FrontEnd(object):
         # Init pygame
         pygame.init()
 
-        # Creat pygame window
-        pygame.display.set_caption("Tello video stream")
-        self.screen = pygame.display.set_mode([960, 720])
-
         # Init Tello object that interacts with the Tello drone
         self.tello = Tello()
+
+        # Create pygame window
+        pygame.display.set_caption("LaserCat View - Battery: %s" % self.tello.get_battery())
+        self.screen = pygame.display.set_mode([960, 720])
 
         # Drone velocities between -100~100
         self.for_back_velocity = 0
