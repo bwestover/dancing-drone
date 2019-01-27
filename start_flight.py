@@ -67,6 +67,7 @@ class FrontEnd(object):
         frame_read = self.tello.get_frame_read()
 
         should_stop = False
+        update_bat_counter = 0
         while not should_stop:
 
             for event in pygame.event.get():
@@ -93,6 +94,12 @@ class FrontEnd(object):
             frame = pygame.surfarray.make_surface(frame)
             self.screen.blit(frame, (0, 0))
             pygame.display.update()
+
+            update_bat_counter += 1
+
+            if (update_bat_counter > 249):
+                pygame.display.set_caption("LaserCat View - Battery: %s" % self.tello.get_battery())
+                update_bat_counter = 0
 
             time.sleep(1 / FPS)
 
